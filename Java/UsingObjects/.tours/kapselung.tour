@@ -1,0 +1,26 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Kapselung",
+  "steps": [
+    {
+      "file": "OOP/src/Car.java",
+      "description": "Diese Attribute sind privat, um die Kapselung zu ermöglichen. Die Kapeslung funktioniert mithilfe von getter und setter, um unerwünschte Eingaben zu verhinder. Beispilsweise einen negativen TopSpeed.",
+      "line": 3
+    },
+    {
+      "file": "OOP/src/Car.java",
+      "description": "Hier haben wir die getter. ",
+      "line": 40
+    },
+    {
+      "file": "OOP/src/Car.java",
+      "description": "hier die setter, allerdings muss hier noch geprüft werden, das der wert nicht negativ wird. ",
+      "line": 54
+    },
+    {
+      "file": "OOP/src/Main.java",
+      "description": "Wir erstellen uns eine dynmaisches Array, um bei Bedarf andere Autos hinzuzufügen wenn wir wollen.",
+      "line": 14
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "C Development Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools", // C/C++ IntelliSense & Debugging
+        "llvm-vs-code-extensions.vscode-clangd", // Clang-Format & Autovervollständigung
+        "twxs.cmake", // Falls du mit CMake arbeitest
+        "vadimcn.vscode-lldb", // Debugger für LLDB
+        "formulahendry.code-runner", // Code Runner für schnelles Ausführen
+        "ritwickdey.liveserver", // Live Server für Webentwicklung
+        "ms-vscode.codetour", // Code Tour für interaktive Code-Dokumentation
+        "wayou.vscode-todo-highlight", // TODO Highlight für Markierungen
+        "PKief.material-icon-theme", // Material Icon Theme für bessere Icons
+        "hediet.vscode-drawio", // Draw.io Integration für Diagramme
+        "jeanp413.polacode-2022", // Polacode 2022 für schöne Code-Screenshots
+        "streetsidesoftware.code-spell-checker", // Code Spell Checker für Rechtschreibprüfung
+        "esbenp.prettier-vscode" // Prettier für Code-Formatierung
+      ],
+      "settings": {
+        "C_Cpp.default.intelliSenseMode": "linux-gcc-x64",
+        "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+        "C_Cpp.default.cppStandard": "c++17",
+        "code-runner.executorMap": {
+          "c": "gcc $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
+          "cpp": "g++ $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt"
+        },
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "postCreateCommand": "gcc --version"
+}
