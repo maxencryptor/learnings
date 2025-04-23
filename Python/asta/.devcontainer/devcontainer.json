@@ -1,0 +1,37 @@
+{
+    "name": "Python Development Container",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "esbenp.prettier-vscode",                  // Prettier für Code-Formatierung
+          "streetsidesoftware.code-spell-checker",   // Code Spell Checker
+          "pkief.material-icon-theme",               // Material Icon Theme
+          "hediet.vscode-drawio",                    // Draw.io für Diagramme
+          "jeanp413.polacode-2022",                  // Polacode für Code Screenshots
+          "ms-vscode.codetour",                      // Code Tour für interaktive Dokus
+          "ritwickdey.liveser",                      // Web development
+          "vsls-contrib.codetour",                   // Process of Code to explain.
+          "wayou.vscode-todo-highlight",             // TODO Markierungen
+          "jeff-hykin.polacode-2019",                // Alternative Polacode-Version
+          "illixion.vscode-vibrancy-continued",      // UI Styling
+          "ms-python.python",                        // Haupt-Python-Erweiterung
+          "ms-python.vscode-pylance",                // IntelliSense + Typprüfung
+          "ms-toolsai.jupyter",                      // Jupyter Notebook Support
+          "donjayamanne.python-environment-manager", // Umgebungsauswahl
+          "njpwerner.autodocstring"                  // Automatische Docstring-Generierung
+        ],
+        "settings": {
+          "editor.formatOnSave": true,
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "python.defaultInterpreterPath": "/usr/local/bin/python",
+          "python.formatting.provider": "black",
+          "python.linting.enabled": true,
+          "python.linting.pylintEnabled": true
+        }
+      }
+    },
+    "postCreateCommand": "python --version"
+  }

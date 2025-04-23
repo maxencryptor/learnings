@@ -1,0 +1,38 @@
+{
+  "name": "JavaScript/TypeScript Development Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",                  // Prettier für Formatierung
+        "streetsidesoftware.code-spell-checker",   // Rechtschreibprüfung
+        "pkief.material-icon-theme",               // Schöne Icons
+        "hediet.vscode-drawio",                    // Diagramme
+        "jeanp413.polacode-2022",                  // Code-Screenshots
+        "ms-vscode.codetour",                      // Code-Touren
+        "ritwickdey.liveser",                      // Live Server
+        "vsls-contrib.codetour",                   // Alternative Code Tours
+        "wayou.vscode-todo-highlight",             // TODO-Markierungen
+        "jeff-hykin.polacode-2019",                // Polacode-Alternative
+        "illixion.vscode-vibrancy-continued",      // UI-Styling
+        "dbaeumer.vscode-eslint",                  // ESLint-Support
+        "ms-vscode.vscode-typescript-tslint-plugin", // TSLint für TypeScript
+        "dsznajder.es7-react-js-snippets"          // React/JS Snippets
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "files.eol": "\n",
+        "javascript.format.enable": false,
+        "typescript.format.enable": false,
+        "eslint.enable": true,
+        "eslint.validate": ["javascript", "typescript"],
+        "prettier.singleQuote": true,
+        "prettier.trailingComma": "all"
+      }
+    }
+  },
+  "postCreateCommand": "node -v && npm -v && tsc -v"
+}
